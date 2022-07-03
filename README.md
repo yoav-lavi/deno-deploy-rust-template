@@ -24,8 +24,8 @@ cargo generate --git https://github.com/yoav-lavi/deno-deploy-rust-template.git 
 ## Building your project
 
 ```sh
-cargo build --release --target wasm32-unknown-unknown;
-wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
+cargo build --release --target wasm32-unknown-unknown \
+&& wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
 ```
 
 ## Running your project with Deno
