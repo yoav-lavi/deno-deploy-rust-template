@@ -10,7 +10,7 @@ A template for creating <a href="https://deno.com/deploy">Deno Deploy</a> projec
 
 ## Prerequisites
 
-- [`cargo-generate`](https://github.com/cargo-generate/cargo-generate) (optional, use this template and manually change the needed placeholders otherwise)
+- [`cargo-generate`](https://github.com/cargo-generate/cargo-generate) (optional, use this template and manually change all placeholders otherwise)
 - [`wasm-bindgen-cli`](https://rustwasm.github.io/wasm-bindgen/reference/cli.html) (`wasm-pack` does not have a stable version targeting Deno yet)
 - [`deno`](https://deno.land)
 - [`deployctl`](https://github.com/denoland/deployctl)
