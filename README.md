@@ -36,9 +36,17 @@ deno run --allow-read --allow-net src/index.ts
 
 ## Running tests
 
+### Rust
+
 ```sh
 cargo test --target wasm32-unknown-unknown
 ```
+
+### E2E
+
+```sh
+ deno test --allow-read --allow-net tests/e2e.ts
+ ```
 
 ## Deploying to Deno Deploy
 
