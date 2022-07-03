@@ -3,7 +3,7 @@ use wasm_bindgen_test::*;
 use web_sys::{Request, RequestInit};
 
 #[wasm_bindgen_test]
-async fn deno_deploy_test() {
+async fn handler_test() {
     let mut request_init = RequestInit::new();
 
     request_init.method("POST");
