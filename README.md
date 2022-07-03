@@ -34,6 +34,12 @@ wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target 
 deno run --allow-read --allow-net src/index.ts
 ```
 
+## Running tests
+
+```sh
+cargo test --target wasm32-unknown-unknown
+```
+
 ## Deploying to Deno Deploy
 
 > **Note**
