@@ -37,5 +37,5 @@ deno run --allow-read --allow-net src/index.ts
 ## Deploy
 
 ```sh
-deployctl deploy --token=...  --project={{deno_deploy_project_name}} src/index.ts --exclude "target/"
+deployctl deploy --token=...  --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"
 ```

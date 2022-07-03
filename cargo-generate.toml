@@ -1,0 +1,3 @@
+[placeholders.deno-deploy-project-name]
+type = "string"
+prompt = "What's your Deno Deploy project name?"
