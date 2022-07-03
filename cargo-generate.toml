@@ -1,3 +1,6 @@
 [placeholders.deno-deploy-project-name]
 type = "string"
 prompt = "What's your Deno Deploy project name? (create an empty project if you don't have one)"
+
+[template]
+exclude = ["LICENSE"]
