@@ -1,4 +1,3 @@
-use js_sys::JSON;
 use wasm_bindgen::prelude::*;
 use web_sys::{Request, Response};
 
