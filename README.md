@@ -38,7 +38,7 @@ deno run --allow-read --allow-net src/index.ts
 
 > **Note**
 >
-> Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--tokens=...`
+> Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--token=...`
 
 ```sh
 deployctl deploy --token=...  --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"
