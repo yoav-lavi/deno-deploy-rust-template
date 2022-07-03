@@ -1,4 +1,4 @@
-use project_name::handler;
+use {{project-name}}::handler;
 use wasm_bindgen_test::*;
 use web_sys::{Request, RequestInit};
 
