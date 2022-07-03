@@ -21,20 +21,20 @@ A template for creating <a href="https://deno.com/deploy">Deno Deploy</a> projec
 cargo generate --git https://github.com/yoav-lavi/deno-deploy-rust-template.git --name my-project
 ```
 
-## Build
+## Building your project
 
 ```sh
 cargo build --release --target wasm32-unknown-unknown;
 wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
 ```
 
-## Run
+## Running your project with Deno
 
 ```sh
 deno run --allow-read --allow-net src/index.ts
 ```
 
-## Deploy
+## Deploying to Deno Deploy
 
 > **Note**
 >
