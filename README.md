@@ -37,6 +37,7 @@ deno run --allow-read --allow-net src/index.ts
 ## Deploy
 
 > **Note**
+>
 > Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--tokens=...`
 
 ```sh
