@@ -1,6 +1,10 @@
-# `deno-deploy-rust-template`
+<p align="center">
+    <code>deno-deploy-rust-template</code>
+</p>
 
-A template for creating [Deno Deploy](https://deno.com/deploy) projects in Rust
+<p align="center">
+A template for creating <a href="https://deno.com/deploy">Deno Deploy</a> projects in Rust
+</p>
 
 ## Prerequisites
 
