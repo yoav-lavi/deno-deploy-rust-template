@@ -4,7 +4,9 @@ import "../src/index.ts";
 Deno.test({
   name: "E2E",
   fn: async () => {
-    let response = await fetch("http://localhost:8000");
+    const response = await fetch("http://localhost:8000", {
+      method: "POST",
+    });
     assertStrictEquals(await response.text(), "hello world!");
   },
   sanitizeResources: false,
