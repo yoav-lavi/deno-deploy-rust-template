@@ -1,6 +1,8 @@
-<p align="center">
+<div align="center">
+  <h1>
     <code>deno-deploy-rust-template</code>
-</p>
+  </h1>
+</div>
 
 <p align="center">
 A template for creating <a href="https://deno.com/deploy">Deno Deploy</a> projects in Rust
