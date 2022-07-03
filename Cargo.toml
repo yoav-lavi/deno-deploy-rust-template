@@ -3,12 +3,29 @@ name = "{{project-name}}"
 version = "0.1.0"
 edition = "2021"
 
-# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
-
 [lib]
-crate-type = ["cdylib"]
+crate-type = ["cdylib", "rlib"]
 
 [dependencies]
-web-sys = { version = "0.3.58", features = ["Request", "Response"] }
+web-sys = { version = "0.3.58", features = [
+    "Headers",
+    "Request",
+    "RequestInit",
+    "RequestMode",
+    "Response",
+    "FormData",
+    "Blob",
+    "BlobPropertyBag",
+] }
 wasm-bindgen = "0.2"
 wasm-bindgen-futures = "0.4.31"
+console_error_panic_hook = "0.1.7"
+
+[dev-dependencies]
+wasm-bindgen-test = "0.3.31"
+
+[target.wasm32-unknown-unknown]
+runner = 'wasm-bindgen-test-runner'
+
+[profile.release]
+opt-level = "s"
