@@ -40,12 +40,12 @@ cargo make build-wasm
 ```
 
 <details>
-<summary>Manual command</summary>
-<br>
-```sh
-cargo build --release --target wasm32-unknown-unknown \
-&& wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
-```
+  <summary>Manual command</summary>
+  <br>
+  <code>
+    cargo build --release --target wasm32-unknown-unknown \
+    && wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
+  </code>
 </details>
 
 ### Running your project with Deno
@@ -55,11 +55,11 @@ cargo make run
 ```
 
 <details>
-<summary>Manual command</summary>
-<br>
-```sh
-deno run --allow-read --allow-net src/index.ts
-```
+  <summary>Manual command</summary>
+  <br>
+  <code>
+    deno run --allow-read --allow-net src/index.ts
+  </code>
 </details>
 
 ### Running tests
@@ -70,12 +70,12 @@ cargo make test-e2e
 ```
 
 <details>
-<summary>Manual command</summary>
-<br>
-```sh
-cargo test --target wasm32-unknown-unknown
-deno test --allow-read --allow-net tests/e2e.ts
-```
+  <summary>Manual command</summary>
+  <br>
+  <code>
+    cargo test --target wasm32-unknown-unknown
+    deno test --allow-read --allow-net tests/e2e.ts
+  </code>
 </details>
 
 
@@ -93,17 +93,17 @@ DENO_DEPLOY_TOKEN=... cargo make test-e2e
 ```
 
 <details>
-<summary>Manual command</summary>
-<br>
-> **Note**
->
-> Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--token=...`
->
-> If `~/.deno/bin` is not in your `$PATH`, you will need to add it for this command to work 
+  <summary>Manual command</summary>
+  <br>
+  > **Note**
+  >
+  > Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--token=...`
+  >
+  > If `~/.deno/bin` is not in your `$PATH`, you will need to add it for this command to work 
 
-```sh
-deployctl deploy --token=...  --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"
-```
+  <code>
+    deployctl deploy --token=...  --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"
+  </code>
 </details>
 
 
