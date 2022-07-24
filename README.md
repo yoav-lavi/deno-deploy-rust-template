@@ -14,7 +14,7 @@ A template for creating <a href="https://deno.com/deploy">Deno Deploy</a> projec
 - [`cargo-make`](https://github.com/sagiegurari/cargo-make#installation)
 
 <details>
-  <summary>Prerequisites for running without <code>cargo-make</code></summary>
+  <summary>Prerequisites for usage without <code>cargo-make</code></summary>
   <br>
   <ul>
     <li><a href="https://github.com/cargo-generate/cargo-generate"><code>cargo-generate</code></a></li>
