@@ -6,7 +6,7 @@ install_crate = { crate_name = "deno", binary = "deno", test_arg = "--help" }
 
 [tasks.install-deployctl]
 install_script = '''
-deno install --allow-read --allow-write --allow-env --allow-net --allow-run --no-check -f https://deno.land/x/deploy/deployctl.ts
+deno install --allow-read --allow-write --allow-env --allow-net --allow-run --no-check --force https://deno.land/x/deploy/deployctl.ts
 '''
 ignore_errors = true
 
