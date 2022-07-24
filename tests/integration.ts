@@ -2,7 +2,7 @@ import { assertStrictEquals } from "https://deno.land/std@0.146.0/testing/assert
 import "../src/index.ts";
 
 Deno.test({
-  name: "E2E",
+  name: "Integration",
   fn: async () => {
     const response = await fetch("http://localhost:8000", {
       method: "POST",

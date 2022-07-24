@@ -65,13 +65,13 @@ cargo make run
 
 ```sh
 cargo make test-rust
-cargo make test-e2e
+cargo make test-integration
 ```
 
 <details>
   <summary>Manual command</summary>
   <br>
-  <pre>cargo test --target wasm32-unknown-unknown<br>deno test --allow-read --allow-net --allow-env tests/e2e.ts</pre>
+  <pre>cargo test --target wasm32-unknown-unknown<br>deno test --allow-read --allow-net --allow-env tests/integration.ts</pre>
 </details>
 
 
@@ -85,7 +85,7 @@ cargo make test-e2e
 
 
 ```sh
-DENO_DEPLOY_TOKEN=... cargo make test-e2e
+DENO_DEPLOY_TOKEN=... cargo make deploy
 ```
 
 <details>

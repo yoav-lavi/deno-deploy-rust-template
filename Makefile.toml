@@ -57,7 +57,7 @@ dependencies = ["build-wasm", "run-with-deno"]
 command = "cargo"
 args = ["test", "--target", "wasm32-unknown-unknown"]
 
-[tasks.test-e2e]
+[tasks.test-integration]
 dependencies = ["build-wasm"]
 command = "deno"
-args = ["test", "--allow-read", "--allow-net", "tests/e2e.ts"]
+args = ["test", "--allow-read", "--allow-net", "tests/integration.ts"]
