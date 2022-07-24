@@ -20,6 +20,13 @@ OR
 - [`deno`](https://deno.land)
 - [`deployctl`](https://github.com/denoland/deployctl)
 
+## Usage
+
+> **Note**
+>
+> If using `cargo wasm`, any commands requiring `deno` will attempt to install `deno` via `cargo` if it is not already installed and in your `$PATH`.
+> If you want to install `deno` via other means and haven't already, do so before running any `cargo make` commands.
+
 ## Using this template
 
 ```sh
@@ -82,6 +89,8 @@ OR
 > **Note**
 >
 > Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `DENO_DEPLOY_TOKEN=...`
+>
+> If `~/.deno/bin` is not in your `$PATH`, you will need to add it for this command to work
 
 
 ```sh
@@ -93,6 +102,8 @@ OR
 > **Note**
 >
 > Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--token=...`
+>
+> If `~/.deno/bin` is not in your `$PATH`, you will need to add it for this command to work 
 
 ```sh
 deployctl deploy --token=...  --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"

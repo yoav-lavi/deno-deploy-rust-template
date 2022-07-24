@@ -1,7 +1,6 @@
 [tasks.install-wasm-bindgen]
 install_crate = { crate_name = "wasm-bindgen-cli", binary = "wasm-bindgen", test_arg = "--help" }
 
-
 [tasks.install-deno]
 install_crate = { crate_name = "deno", binary = "deno", test_arg = "--help" }
 
