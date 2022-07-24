@@ -87,12 +87,6 @@ DENO_DEPLOY_TOKEN=... cargo make test-e2e
 <details>
   <summary>Manual command</summary>
   <br>
-  > **Note**
-  >
-  > Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--token=...`
-  >
-  > If `~/.deno/bin` is not in your `$PATH`, you will need to add it for this command to work 
-
   <pre>deployctl deploy --token=... --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"</pre>
 </details>
 
