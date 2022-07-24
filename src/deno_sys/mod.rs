@@ -27,7 +27,7 @@ pub mod Deno {
         #[wasm_bindgen(js_namespace = Deno, static_method_of = env)]
         pub fn delete(delete: String);
 
-        #[wasm_bindgen(js_namespace = Deno, static_method_of = env, js_name=toObject)]
+        #[wasm_bindgen(js_namespace = Deno, static_method_of = env, js_name = toObject)]
         pub fn to_object() -> Object;
     }
 }
