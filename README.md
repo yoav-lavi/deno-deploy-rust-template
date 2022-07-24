@@ -38,12 +38,15 @@ cargo generate --git https://github.com/yoav-lavi/deno-deploy-rust-template.git 
 ```sh
 cargo make build-wasm
 ```
-OR
 
+<details>
+<summary>Manual command</summary>
+<br>
 ```sh
 cargo build --release --target wasm32-unknown-unknown \
 && wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
 ```
+</details>
 
 ### Running your project with Deno
 
@@ -51,11 +54,13 @@ cargo build --release --target wasm32-unknown-unknown \
 cargo make run
 ```
 
-OR
-
+<details>
+<summary>Manual command</summary>
+<br>
 ```sh
 deno run --allow-read --allow-net src/index.ts
 ```
+</details>
 
 ### Running tests
 
@@ -64,12 +69,15 @@ cargo make test-rust
 cargo make test-e2e
 ```
 
-OR
-
+<details>
+<summary>Manual command</summary>
+<br>
 ```sh
 cargo test --target wasm32-unknown-unknown
 deno test --allow-read --allow-net tests/e2e.ts
 ```
+</details>
+
 
 ### Deploying to Deno Deploy
 
@@ -84,8 +92,9 @@ deno test --allow-read --allow-net tests/e2e.ts
 DENO_DEPLOY_TOKEN=... cargo make test-e2e
 ```
 
-OR
-
+<details>
+<summary>Manual command</summary>
+<br>
 > **Note**
 >
 > Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `--token=...`
@@ -95,3 +104,7 @@ OR
 ```sh
 deployctl deploy --token=...  --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"
 ```
+</details>
+
+
+
