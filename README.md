@@ -46,7 +46,7 @@ cargo make build-wasm
 <details>
   <summary>Manual command</summary>
   <br>
-  <pre>cargo build --release --target wasm32-unknown-unknown<br>&& wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/</pre>
+  <pre>rustup target add wasm32-unknown-unknown<br>&& cargo build --release --target wasm32-unknown-unknown<br>&& wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/</pre>
 </details>
 
 ### Deploying to Deno Deploy
