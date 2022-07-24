@@ -28,7 +28,7 @@ A template for creating <a href="https://deno.com/deploy">Deno Deploy</a> projec
 
 > **Note**
 >
-> If using `cargo wasm`, any commands requiring `deno` will attempt to install `deno` via `cargo`, if it is not already installed and in your `$PATH`.
+> If using `cargo make`, any commands requiring `deno` will attempt to install `deno` via `cargo`, if it is not already installed and in your `$PATH`.
 > If you want to install `deno` via other means and haven't already, do so before running any `cargo make` commands.
 
 ### Using this template
