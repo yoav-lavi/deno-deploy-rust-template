@@ -49,7 +49,6 @@ cargo make build-wasm
   <pre>cargo build --release --target wasm32-unknown-unknown<br>&& wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/</pre>
 </details>
 
-
 ### Deploying to Deno Deploy
 
 > **Note**
@@ -57,7 +56,6 @@ cargo make build-wasm
 > Create a new token in the Deno Deploy (under "Access Tokens") and use it in place of `...` in `DENO_DEPLOY_TOKEN=...`
 >
 > If `~/.deno/bin` is not in your `$PATH`, you will need to add it for this command to work
-
 
 ```sh
 DENO_DEPLOY_TOKEN=... cargo make deploy
