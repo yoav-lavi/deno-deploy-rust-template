@@ -81,7 +81,6 @@ cargo make run
   <pre>deno run --allow-read --allow-net --allow-env src/index.ts</pre>
 </details>
 
-
 ### Running tests
 
 ```sh
