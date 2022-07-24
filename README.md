@@ -13,12 +13,16 @@ A template for creating <a href="https://deno.com/deploy">Deno Deploy</a> projec
 - [`cargo-generate`](https://github.com/cargo-generate/cargo-generate)
 - [`cargo-make`](https://github.com/sagiegurari/cargo-make#installation)
 
-OR
-
-- [`cargo-generate`](https://github.com/cargo-generate/cargo-generate)
-- [`wasm-bindgen-cli`](https://rustwasm.github.io/wasm-bindgen/reference/cli.html) (`wasm-pack` does not have a stable version targeting Deno yet)
-- [`deno`](https://deno.land)
-- [`deployctl`](https://github.com/denoland/deployctl)
+<details>
+  <summary>Prerequisites for running without <code>cargo-make</code></summary>
+  <br>
+  <ul>
+    <li><a href="https://github.com/cargo-generate/cargo-generate"><code>cargo-generate</code></a></li>
+    <li><a href="https://rustwasm.github.io/wasm-bindgen/reference/cli.html"><code>wasm-bindgen-cli</code></a></li>
+    <li><a href="https://deno.land"><code>deno</code></a></li>
+    <li><a href="https://github.com/denoland/deployctl"><code>deployctl</code></a></li>
+  </ul>
+</details>
 
 ## Usage
 
