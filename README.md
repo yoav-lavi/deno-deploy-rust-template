@@ -58,7 +58,7 @@ cargo make run
 <details>
   <summary>Manual command</summary>
   <br>
-  <pre>deno run --allow-read --allow-net src/index.ts</pre>
+  <pre>deno run --allow-read --allow-net --allow-env src/index.ts</pre>
 </details>
 
 ### Running tests
@@ -71,7 +71,7 @@ cargo make test-e2e
 <details>
   <summary>Manual command</summary>
   <br>
-  <pre>cargo test --target wasm32-unknown-unknown<br>deno test --allow-read --allow-net tests/e2e.ts</pre>
+  <pre>cargo test --target wasm32-unknown-unknown<br>deno test --allow-read --allow-net --allow-env tests/e2e.ts</pre>
 </details>
 
 
