@@ -1,0 +1,64 @@
+[tasks.install-wasm-bindgen]
+install_crate = { crate_name = "wasm-bindgen-cli", binary = "wasm-bindgen", test_arg = "--help" }
+
+
+[tasks.install-deno]
+install_crate = { crate_name = "deno", binary = "deno", test_arg = "--help" }
+
+[tasks.install-deployctl]
+install_script = '''
+deno install --allow-read --allow-write --allow-env --allow-net --allow-run --no-check -f https://deno.land/x/deploy/deployctl.ts
+'''
+ignore_errors = true
+
+[tasks.cargo-build]
+command = "cargo"
+args = ["build", "--release", "--target", "wasm32-unknown-unknown"]
+
+[tasks.wasm-bindgen]
+command = "wasm-bindgen"
+args = [
+    "target/wasm32-unknown-unknown/release/{{crate_name}}.wasm",
+    "--target",
+    "deno",
+    "--out-dir",
+    "build/",
+]
+
+[tasks.build-wasm]
+dependencies = [
+    "install-wasm-bindgen",
+    "install-deno",
+    "install-deployctl",
+    "cargo-build",
+    "wasm-bindgen",
+]
+
+[tasks.run-deployctl]
+command = "deployctl"
+args = [
+    "deploy",
+    "--project={{deno-deploy-project-name}}",
+    "src/index.ts",
+    "--exclude",
+    "target/",
+]
+
+[tasks.run-with-deno]
+command = "deno"
+args = ["run", "--allow-read", "--allow-net", "--allow-env", "src/index.ts"]
+
+[tasks.deploy]
+dependencies = ["build-wasm", "install-deployctl", "run-deployctl"]
+
+[tasks.run]
+dependencies = ["build-wasm", "run-with-deno"]
+
+[tasks.test-rust]
+command = "cargo"
+args = ["test", "--target", "wasm32-unknown-unknown"]
+
+[tasks.test-e2e]
+dependencies = ["build-wasm"]
+command = "deno"
+args = ["test", "--allow-read", "--allow-net", "tests/e2e.ts"]
