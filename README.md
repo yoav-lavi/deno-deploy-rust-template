@@ -30,7 +30,7 @@ OR
 ### Using this template
 
 ```sh
-cargo generate --git https://github.com/yoav-lavi/deno-deploy-rust-template.git --name my-project
+cargo generate gh:yoav-lavi/deno-deploy-rust-template
 ```
 
 ### Building your project
