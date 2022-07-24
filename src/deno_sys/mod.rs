@@ -1,3 +1,6 @@
+/// The global `Deno` object
+///
+/// [Deno documentation](https://doc.deno.land/deno/stable/~/Deno)
 #[allow(non_snake_case)]
 pub mod Deno {
     use js_sys::Object;
