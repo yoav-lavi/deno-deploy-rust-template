@@ -42,10 +42,10 @@ cargo make build-wasm
 <details>
   <summary>Manual command</summary>
   <br>
-  <code>
+  <pre>
     cargo build --release --target wasm32-unknown-unknown \
     && wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
-  </code>
+  </pre>
 </details>
 
 ### Running your project with Deno
@@ -57,9 +57,9 @@ cargo make run
 <details>
   <summary>Manual command</summary>
   <br>
-  <code>
+  <pre>
     deno run --allow-read --allow-net src/index.ts
-  </code>
+  </pre>
 </details>
 
 ### Running tests
@@ -72,10 +72,10 @@ cargo make test-e2e
 <details>
   <summary>Manual command</summary>
   <br>
-  <code>
+  <pre>
     cargo test --target wasm32-unknown-unknown
     deno test --allow-read --allow-net tests/e2e.ts
-  </code>
+  </pre>
 </details>
 
 
@@ -101,9 +101,9 @@ DENO_DEPLOY_TOKEN=... cargo make test-e2e
   >
   > If `~/.deno/bin` is not in your `$PATH`, you will need to add it for this command to work 
 
-  <code>
+  <pre>
     deployctl deploy --token=...  --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"
-  </code>
+  </pre>
 </details>
 
 
