@@ -9,6 +9,7 @@ pub mod Deno {
     #[wasm_bindgen]
     extern "C" {
         /// The `env` variable on the global `Deno` object.
+        ///
         /// Allows to get, set and delete environment variables
         ///
         /// [Deno documentation](https://doc.deno.land/deno/stable/~/Deno.env)
