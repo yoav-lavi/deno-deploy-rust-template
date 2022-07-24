@@ -49,31 +49,6 @@ cargo make build-wasm
   <pre>cargo build --release --target wasm32-unknown-unknown<br>&& wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/</pre>
 </details>
 
-### Running your project with Deno
-
-```sh
-cargo make run
-```
-
-<details>
-  <summary>Manual command</summary>
-  <br>
-  <pre>deno run --allow-read --allow-net --allow-env src/index.ts</pre>
-</details>
-
-### Running tests
-
-```sh
-cargo make test-rust
-cargo make test-integration
-```
-
-<details>
-  <summary>Manual command</summary>
-  <br>
-  <pre>cargo test --target wasm32-unknown-unknown<br>deno test --allow-read --allow-net --allow-env tests/integration.ts</pre>
-</details>
-
 
 ### Deploying to Deno Deploy
 
@@ -94,5 +69,29 @@ DENO_DEPLOY_TOKEN=... cargo make deploy
   <pre>deployctl deploy --token=... --project={{deno-deploy-project-name}} src/index.ts --exclude "target/"</pre>
 </details>
 
+### Running your project with Deno
 
+```sh
+cargo make run
+```
+
+<details>
+  <summary>Manual command</summary>
+  <br>
+  <pre>deno run --allow-read --allow-net --allow-env src/index.ts</pre>
+</details>
+
+
+### Running tests
+
+```sh
+cargo make test-rust
+cargo make test-integration
+```
+
+<details>
+  <summary>Manual command</summary>
+  <br>
+  <pre>cargo test --target wasm32-unknown-unknown<br>deno test --allow-read --allow-net --allow-env tests/integration.ts</pre>
+</details>
 
