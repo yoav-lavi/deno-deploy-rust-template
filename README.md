@@ -27,13 +27,13 @@ OR
 > If using `cargo wasm`, any commands requiring `deno` will attempt to install `deno` via `cargo`, if it is not already installed and in your `$PATH`.
 > If you want to install `deno` via other means and haven't already, do so before running any `cargo make` commands.
 
-## Using this template
+### Using this template
 
 ```sh
 cargo generate --git https://github.com/yoav-lavi/deno-deploy-rust-template.git --name my-project
 ```
 
-## Building your project
+### Building your project
 
 ```sh
 cargo make build-wasm
@@ -45,7 +45,7 @@ cargo build --release --target wasm32-unknown-unknown \
 && wasm-bindgen target/wasm32-unknown-unknown/release/{{crate_name}}.wasm --target deno --out-dir build/
 ```
 
-## Running your project with Deno
+### Running your project with Deno
 
 ```sh
 cargo make run
@@ -57,9 +57,9 @@ OR
 deno run --allow-read --allow-net src/index.ts
 ```
 
-## Running tests
+### Running tests
 
-### Rust
+#### Rust
 
 ```sh
 cargo make test-rust
@@ -71,7 +71,7 @@ OR
 cargo test --target wasm32-unknown-unknown
 ```
 
-### E2E
+#### E2E
 
 ```sh
 cargo make test-e2e
@@ -84,7 +84,7 @@ OR
  deno test --allow-read --allow-net tests/e2e.ts
 ```
 
-## Deploying to Deno Deploy
+### Deploying to Deno Deploy
 
 > **Note**
 >
