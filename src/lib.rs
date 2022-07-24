@@ -1,3 +1,5 @@
+mod deno_sys;
+
 use wasm_bindgen::prelude::*;
 use web_sys::{Request, Response};
 
