@@ -14,7 +14,7 @@ pub mod Deno {
         ///
         /// [Deno documentation](https://doc.deno.land/deno/stable/~/Deno.env)
         #[allow(non_camel_case_types)]
-        #[wasm_bindgen(js_namespace = Deno, extends = Object, js_name="env")]
+        #[wasm_bindgen(js_namespace = Deno, extends = Object)]
         #[derive(Clone, Debug)]
         pub type env;
 
